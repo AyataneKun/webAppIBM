@@ -5,9 +5,6 @@
     Created on : 18/07/2018, 15:53:54
     Author     : Aluisio
 --%>
-<sql:query var="subjects" dataSource="jdbc/bancodb_ibm">
-    SELECT subject_id, name FROM Subject
-</sql:query>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
