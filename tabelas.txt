@@ -1,0 +1,34 @@
+DROP TABLE IF EXISTS Conta;
+DROP TABLE IF EXISTS Operacoes;
+
+
+CREATE TABLE Operacoes (
+	op_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	conta_user VARCHAR(6) NOT NULL,
+	conta_fav VARCHAR(6) NOT NULL,
+	data DATE DEFAULT '0000-00-00',
+	tipo TINYINT UNSIGNED NOT NULL,
+	valor SMALLINT UNSIGNED NOT NULL,
+	PRIMARY KEY (op_id)
+);		
+
+
+CREATE TABLE Conta (
+	nconta VARCHAR (6) NOT NULL,
+	nome VARCHAR (50),
+	idade VARCHAR(2),
+	endereco VARCHAR(80),
+	cidade VARCHAR(30),
+	estado VARCHAR(25),
+	saldo INT,
+	PRIMARY KEY (nconta)
+);
+
+
+INSERT INTO Operacoes (op_id, conta_user, conta_fav, data, tipo, valor)
+	VALUES ('1', '99999', '0', '2000-01-01', '1', '100');
+
+
+INSERT INTO Conta (nconta, nome, idade, endereco, cidade, estado, saldo)
+	VALUES  ('99999', 'test_name name_test', '20', 'Rua testando, Nº999, Jardim Teste', 'Test-city', 'Testxas', '1000'),
+		('0', '0', '0', '0', '0', '0', '0');
